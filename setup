@@ -3,6 +3,18 @@
 # Script Mod by BytesPH - AkoSiBytes
 #
 
+IP=$(curl -s https://api.ipify.org)
+DATA=$(curl -sb -X POST https://bytesph.com/api/my-panel/servers -H "Content-Type: application/x-www-form-urlencoded" -d "ip=$IP")
+
+if [ $DATA == "false" ];
+then
+ echo "Installation is exclusive for BytesPH Only. You are not allowed. This incident is already reported to the Admin."
+ echo "Exiting now..."
+ curl -sb -X POST https://bytesph.com/api/server/install -H "Content-Type: application/x-www-form-urlencoded" -d "status=unauthorized&ip=$IP"
+ sleep 5;
+ exit 1
+fi
+
 #############################
 #############################
 # Variables (Can be changed depends on your preferred values)
