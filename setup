@@ -564,7 +564,7 @@ done
  # executed/raised from this script (OpenVPN_TCP_Port/OpenVPN_UDP_Port)
  #
  # Enjoy the new update
- # Script Updated by PR Aiman
+ # Script Updated by BytesPH - AkoSiBytes
 NUovpn
 
  # setting openvpn server port
@@ -847,11 +847,8 @@ $(cat /etc/openvpn/ca.crt)
 EOF16
 
 cat <<EOF162> /var/www/openvpn/client-udp.ovpn
-# PR-Aiman's VPN Premium Script
-# © Github.com/praiman99
-# Telegram : https://t.me/PR_Aiman
-# Official Repository : https://github.com/praiman99/AutoScriptVPN
-# Thanks for using this script, Enjoy Highspeed OpenVPN Service
+# BytesPH VPN Premium Script
+# Telegram : https://t.me/bytesph2023
 client
 dev tun
 proto udp
