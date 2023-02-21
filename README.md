@@ -50,10 +50,3 @@ Credit To : https://github.com/rvpn/AutoScriptDB-1 (Orignal Base Script)
 Credit To : https://github.com/johndesu090/AutoScriptDeb8 (Orignal Menu Script)
 
 Report Bugs Contact : https://t.me/bytesph2023
-
-<h3 align="center">Thanks to ALLAH S.W.T alhamdulillah syukur kehadrat illahi atas kepandaian dan kebijaksanaan yang telah di berikan daripada maha pencipta. semoga segala urusan di masa akan datang dipermudahkan</h3>
-
-<p align="center">
-  <a><img src="https://img.shields.io/badge/Copyright%20©-PR%20Aiman%20AutoScriptVPN%202021.%20All%20rights%20reserved...-blueviolet.svg" style="max-width:200%;">
-    </p>
-   </p>
