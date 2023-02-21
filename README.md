@@ -1,6 +1,6 @@
 <h1 align="center"> VPS AutoScriptVPN <img src="https://img.shields.io/badge/Version-3.0-blue.svg"></h1>
 
-<p align="center">VPS AutoScriptVPN is made by FordSenpai Remodified by PR Aiman for Virtual Private Network</p>
+<p align="center">VPS AutoScriptVPN is made by FordSenpai Remodified by BytesPH - AkoSiBytes for Virtual Private Network</p>
 <h3 align="center">Supported Linux Distribution</h3>
 <p align="center">
   <a><img src="https://img.shields.io/badge/Support-Debian-red.svg"></a>
@@ -33,7 +33,7 @@
 <h3 align="center">Installation</h3>
 
 <p align="center">
-<pre align="center">wget https://raw.githubusercontent.com/praiman99/AutoScriptVPN/master/setup && chmod +x setup && ./setup
+<pre align="center">wget https://raw.githubusercontent.com/andresslacson1989/autoscript-installer/master/setup && chmod +x setup && ./setup
 </pre></p>
 
 <h3 align="center">Download Link Configs OpenVPN</h3>
