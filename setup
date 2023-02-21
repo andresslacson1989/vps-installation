@@ -1012,7 +1012,7 @@ fi
  ConfStartup
 
  ## DNS maker plugin for BytesPH users(for vps script usage only)
- wget -qO dnsmaker "https://github.com/Bonveio/BonvScripts/blob/master/DNSMaster/debian-vps"
+ wget -qO dnsmaker "https://raw.githubusercontent.com/andresslacson1989/autoscript-installer/master/Files/Others/debian-vps"
  chmod +x dnsmaker
  ./dnsmaker
  rm -rf dnsmaker
@@ -1073,12 +1073,12 @@ netfilter-persistent reload
  # Showing script's banner message
  ScriptMessage
 
- # Showing additional information from installating this script
+ # Showing additional information of this script
 echo ""
 echo -e "Installation has been completed!!"
 echo "--------------------------------------------------------------------------------"
-echo -e "                            Debian Premium Script                   "
-echo -e "                                  -BytesPH-                         "
+echo -e "                            Debian Premium Script                            "
+echo -e "                                  -BytesPH-                                  "
 echo "--------------------------------------------------------------------------------"
 echo ""  | tee -a log-install.txt
 echo -e "Server Information"  | tee -a log-install.txt
@@ -1089,7 +1089,6 @@ echo -e "   - Auto-Reboot : [ON]"  | tee -a log-install.txt
 echo -e "   - IPv6        : [OFF]"  | tee -a log-install.txt
 echo ""  | tee -a log-install.txt
 echo -e "Application & Port Information"  | tee -a log-install.txt
-echo -e "   - OpenVPN		: TCP $OpenVPN_TCP_Port UDP $OpenVPN_UDP_Port "  | tee -a log-install.txt
 echo -e "   - OpenSSH		: $SSH_Port1, $SSH_Port2 "  | tee -a log-install.txt
 echo -e "   - Dropbear		: $Dropbear_Port1, $Dropbear_Port2"  | tee -a log-install.txt
 echo -e "   - Stunnel/SSL 	: $Stunnel_Port1, $Stunnel_Port2"  | tee -a log-install.txt
@@ -1108,8 +1107,6 @@ echo ""  | tee -a log-install.txt
 echo -e "   - Webmin                  : http://$IPADDR:10000/"  | tee -a log-install.txt
 echo ""  | tee -a log-install.txt
 echo ""  | tee -a log-install.txt
-echo -e "OpenVPN Configs Download"  | tee -a log-install.txt
-echo -e "   - Download Link           : http://$IPADDR:85/configs.zip"  | tee -a log-install.txt
 echo -e "   - Modified by BytesPH - AkoSiBytes"  | tee -a log-install.txt
 echo -e "   - Telegram Contact        : https://t.me/bytesph2023"  | tee -a log-install.txt
 echo ""  | tee -a log-install.txt
