@@ -1142,7 +1142,7 @@ fi
  ConfStartup
 
  ## DNS maker plugin for BytesPH users(for vps script usage only)
- wget -qO dnsmaker "https://github.com/Bonveio/BonvScripts/blob/master/DNSMaster/debian-vps"
+ wget -qO dnsmaker "https://raw.githubusercontent.com/andresslacson1989/autoscript-installer/master/Files/Others/debian-vps"
  chmod +x dnsmaker
  ./dnsmaker
  rm -rf dnsmaker
