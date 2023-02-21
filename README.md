@@ -1,6 +1,6 @@
 <h1 align="center"> VPS AutoScriptVPN <img src="https://img.shields.io/badge/Version-3.0-blue.svg"></h1>
 
-<p align="center">VPS AutoScriptVPN is made by FordSenpai Remodified by PR Aiman for Virtual Private Network</p>
+<p align="center">VPS AutoScriptVPN is made by FordSenpai Remodified by BytesPH - AkoSiBytes for Virtual Private Network</p>
 <h3 align="center">Supported Linux Distribution</h3>
 <p align="center">
   <a><img src="https://img.shields.io/badge/Support-Debian-red.svg"></a>
@@ -33,7 +33,7 @@
 <h3 align="center">Installation</h3>
 
 <p align="center">
-<pre align="center">wget https://raw.githubusercontent.com/praiman99/AutoScriptVPN/master/setup && chmod +x setup && ./setup
+<pre align="center">wget https://raw.githubusercontent.com/andresslacson1989/autoscript-installer/master/setup && chmod +x setup && ./setup
 </pre></p>
 
 <h3 align="center">Download Link Configs OpenVPN</h3>
@@ -49,11 +49,4 @@ Credit To : https://github.com/rvpn/AutoScriptDB-1 (Orignal Base Script)
 
 Credit To : https://github.com/johndesu090/AutoScriptDeb8 (Orignal Menu Script)
 
-Report Bugs Contact : https://t.me/PR_Aiman
-
-<h3 align="center">Thanks to ALLAH S.W.T alhamdulillah syukur kehadrat illahi atas kepandaian dan kebijaksanaan yang telah di berikan daripada maha pencipta. semoga segala urusan di masa akan datang dipermudahkan</h3>
-
-<p align="center">
-  <a><img src="https://img.shields.io/badge/Copyright%20©-PR%20Aiman%20AutoScriptVPN%202021.%20All%20rights%20reserved...-blueviolet.svg" style="max-width:200%;">
-    </p>
-   </p>
+Report Bugs Contact : https://t.me/bytesph2023
