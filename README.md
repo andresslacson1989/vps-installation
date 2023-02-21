@@ -21,20 +21,12 @@
 <p align="center">
   <a><img src="https://img.shields.io/badge/Commands-menu-blueviolet.svg"></a>
   </p>
-    
- <h3 align="center">Screenshorts</h3>
- 
- <img src="https://raw.githubusercontent.com/praiman99/AutoScriptVPN/master/Screenshort/01.PNG" width="100%">
- <img src="https://raw.githubusercontent.com/praiman99/AutoScriptVPN/master/Screenshort/04.PNG" width="100%">
- <img src="https://raw.githubusercontent.com/praiman99/AutoScriptVPN/master/Screenshort/03.PNG" width="100%">
-  
-  </h3>
   
 <h3 align="center">Installation</h3>
 
-<p align="center">
-<pre align="center">wget https://raw.githubusercontent.com/andresslacson1989/autoscript-installer/master/setup && chmod +x setup && ./setup
-</pre></p>
+```
+wget https://raw.githubusercontent.com/andresslacson1989/autoscript-installer/master/setup && chmod +x setup && ./setup
+```
 
 <h3 align="center">Download Link Configs OpenVPN</h3>
 
