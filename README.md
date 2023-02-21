@@ -49,7 +49,7 @@ Credit To : https://github.com/rvpn/AutoScriptDB-1 (Orignal Base Script)
 
 Credit To : https://github.com/johndesu090/AutoScriptDeb8 (Orignal Menu Script)
 
-Report Bugs Contact : https://t.me/PR_Aiman
+Report Bugs Contact : https://t.me/bytesph2023
 
 <h3 align="center">Thanks to ALLAH S.W.T alhamdulillah syukur kehadrat illahi atas kepandaian dan kebijaksanaan yang telah di berikan daripada maha pencipta. semoga segala urusan di masa akan datang dipermudahkan</h3>
 
