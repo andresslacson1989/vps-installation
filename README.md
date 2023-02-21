@@ -25,7 +25,7 @@
 <h3 align="center">Installation</h3>
 
 ```
-wget https://raw.githubusercontent.com/andresslacson1989/autoscript-installer/master/setup && chmod +x setup && ./setup
+wget https://raw.githubusercontent.com/andresslacson1989/vps-installation/master/setup && chmod +x setup && ./setup
 ```
 
 <h3 align="center">Download Link Configs OpenVPN</h3>
