@@ -1250,8 +1250,8 @@ echo "--------------------------------------------------------------------------
 # Clearing all logs from installation
  rm -rf /root/.bash_history && history -c && echo '' > /var/log/syslog
 echo ""
-echo -e "\e[0;37m  Server will be reboot In 5 Sec"
-sleep 5
+echo -e "\e[0;37m  Server will be reboot In 15 Sec"
+sleep 15
 rm -f setup*
 reboot
 exit 1
