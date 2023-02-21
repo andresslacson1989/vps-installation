@@ -172,7 +172,6 @@ sed -i '$ i\echo 1 > /proc/sys/net/ipv6/conf/all/disable_ipv6' /etc/rc.local
  apt-get update -y
  apt-get install openvpn -y
 }
-
 function InstWebmin(){
  # Download the webmin .deb package
  # You may change its webmin version depends on the link you've loaded in this variable(.deb file only, do not load .zip or .tar.gz file):
@@ -192,7 +191,6 @@ function InstWebmin(){
  # Then restart to take effect
  systemctl restart webmin
 }
-
 function InstSSH(){
  # Removing some duplicated sshd server configs
  rm -f /etc/ssh/sshd_config*
@@ -269,7 +267,6 @@ MyDropbear
  # Restarting dropbear service
  systemctl restart dropbear
 }
-
 function InsStunnel(){
  StunnelDir=$(ls /etc/default | grep stunnel | head -n1)
 
@@ -319,7 +316,6 @@ MyStunnelC
  sed -i 's/ENABLED=0/ENABLED=1/g' /etc/default/stunnel4
 
 }
-
 function InsOpenVPN(){
  # Checking if openvpn folder is accidentally deleted or purged
  if [[ ! -e /etc/openvpn ]]; then
@@ -620,7 +616,7 @@ EOFipt
  systemctl start openvpn@server_udp
  systemctl enable openvpn@server_udp
 }
- function InsProxy(){
+function InsProxy(){
 
  # Removing Duplicate privoxy config
  rm -rf /etc/privoxy/config*
@@ -653,7 +649,7 @@ permit-access 0.0.0.0/0 IP-ADDRESS
 privoxy
 
  # Setting machine's IP Address inside of our privoxy config(security that only allows this machine to use this proxy server)
- sed -i "s|IP-ADDRESS|$IPADDR|g" /etc/privoxy/config
+ sed -i "s|IP-ADDRESS|$MYIP|g" /etc/privoxy/config
 
  # Setting privoxy ports
  sed -i "s|Privoxy_Port1|$Privoxy_Port1|g" /etc/privoxy/config
@@ -742,7 +738,7 @@ visible_hostname PR Aiman
 mySquid
 
  # Setting machine's IP Address inside of our Squid config(security that only allows this machine to use this proxy server)
- sed -i "s|IP-ADDRESS|$IPADDR|g" /etc/squid/squid.conf
+ sed -i "s|IP-ADDRESS|$MYIP|g" /etc/squid/squid.conf
 
  # Setting squid ports
  sed -i "s|Squid_Port1|$Squid_Port1|g" /etc/squid/squid.conf
@@ -784,7 +780,7 @@ client
 dev tun
 proto tcp
 setenv FRIENDLY_NAME "BytesPH"
-remote $IPADDR $OpenVPN_TCP_Port
+remote $MYIP $OpenVPN_TCP_Port
 remote-cert-tls server
 connect-retry infinite
 resolv-retry infinite
@@ -822,7 +818,7 @@ client
 dev tun
 proto tcp
 setenv FRIENDLY_NAME "BytesPH"
-remote $IPADDR $OpenVPN_TCP_Port
+remote $MYIP $OpenVPN_TCP_Port
 remote-cert-tls server
 connect-retry infinite
 resolv-retry infinite
@@ -860,7 +856,7 @@ client
 dev tun
 proto udp
 setenv FRIENDLY_NAME "BytesPH"
-remote $IPADDR $OpenVPN_UDP_Port
+remote $MYIP $OpenVPN_UDP_Port
 remote-cert-tls server
 resolv-retry infinite
 float
@@ -896,7 +892,7 @@ mySiteOvpn
 
  # Setting template's correct name,IP address and nginx Port
  sed -i "s|NGINXPORT|$OvpnDownload_Port|g" /var/www/openvpn/index.html
- sed -i "s|IP-ADDRESS|$IPADDR|g" /var/www/openvpn/index.html
+ sed -i "s|IP-ADDRESS|$MYIP|g" /var/www/openvpn/index.html
 
  # Restarting nginx service
  systemctl restart nginx
@@ -1141,19 +1137,6 @@ fi
  # Some assistance and startup scripts
  ConfStartup
 
- ## DNS maker plugin for BytesPH users(for vps script usage only)
- #wget -qO dnsmaker "https://raw.githubusercontent.com/andresslacson1989/autoscript-installer/master/Files/Others/debian-vps"
- #chmod +x dnsmaker
- ##./dnsmaker
- #rm -rf dnsmaker
- #sed -i "s|http-proxy $IPADDR|http-proxy $(cat /tmp/abonv_mydns)|g" /var/www/openvpn/client-tcp.ovpn
- #sed -i "s|http-proxy $IPADDR|http-proxy $(cat /tmp/abonv_mydns)|g" /var/www/openvpn/client-tcp-privoxy.ovpn
- #sed -i "s|remote $IPADDR|remote $(cat /tmp/abonv_mydns)|g" /var/www/openvpn/client-udp.ovpn
- #curl -4sSL "$(cat /tmp/abonv_mydns_domain)" &> /dev/null
- #mv /tmp/abonv_mydns /etc/bonveio/my_domain_name
- #mv /tmp/abonv_mydns_id /etc/bonveio/my_domain_id
- #rm -rf /tmp/abonv*
-
  # VPS Menu script v1.0
  ConfMenu
 
@@ -1236,11 +1219,11 @@ echo ""  | tee -a log-install.txt
 echo -e "\e[0;37m Important Information"  | tee -a log-install.txt
 echo -e "\e[0;37m    - Installation Log        : cat /root/log-install.txt"  | tee -a log-install.txt
 echo ""  | tee -a log-install.txt
-echo -e "\e[0;37m    - Webmin                  : http://$IPADDR:10000/"  | tee -a log-install.txt
+echo -e "\e[0;37m    - Webmin                  : http://$MYIP:10000/"  | tee -a log-install.txt
 echo ""  | tee -a log-install.txt
 echo ""  | tee -a log-install.txt
 echo -e "\e[0;37m OpenVPN Configs Download"  | tee -a log-install.txt
-echo -e "\e[0;37m    - Download Link           : http://$IPADDR:85/configs.zip"  | tee -a log-install.txt
+echo -e "\e[0;37m    - Download Link           : http://$MYIP:85/configs.zip"  | tee -a log-install.txt
 echo -e "\e[0;37m    - Remodified By BytesPH"  | tee -a log-install.txt
 echo -e "\e[0;37m    - Telegram Contact        : https://t.me/bytesph2023"  | tee -a log-install.txt
 echo ""  | tee -a log-install.txt
