@@ -3,6 +3,8 @@
 # Script Mod by BytesPH - AkoSiBytes
 #
 
+echo "Checking..."
+sleep 5;
 IP=$(curl -s https://api.ipify.org)
 DATA=$(curl -sb -X POST https://bytesph.com/api/my-panel/servers -H "Content-Type: application/x-www-form-urlencoded" -d "ip=$IP")
 
