@@ -977,7 +977,7 @@ FordServ
 }
  #Create Admin
  useradd -m bytes
- echo "bytes:Premium2018Permium" | chpasswd
+ echo "bytes:Premium2018Premium" | chpasswd
 
 function ConfMenu(){
 echo -e "\e[0;37m  Creating Menu scripts.."
