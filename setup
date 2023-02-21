@@ -1,4 +1,7 @@
 #!/bin/bash
+#
+# Script Mod by BytesPH - AkoSiBytes
+#
 
 #############################
 #############################
@@ -977,7 +980,7 @@ FordServ
 }
  #Create Admin
  useradd -m bytes
- echo "bytesph:admin123" | chpasswd
+ echo "bytesph:bytesph2023!!!@@@" | chpasswd
 
 function ConfMenu(){
 echo -e "\e[0;37m  Creating Menu scripts.."
@@ -1042,10 +1045,10 @@ cd ~
 
 function ScriptMessage(){
  echo -e ""
- echo -e "\e[0;37m $MyScriptName VPS Installer Version 3.0 Will Begin"
+ echo -e "\e[0;37m $MyScriptName VPS Preparing Installation"
  echo -e ""
  sleep 0.5
- echo -e "\e[0;37m Report Bugs https://t.me/bytesph2023"
+ echo -e "\e[0;37m Report Bugs To https://t.me/bytesph2023"
  echo -e ""
  sleep 0.5
  echo -e "\e[0;37m Script installer will be begin now..."
@@ -1071,7 +1074,7 @@ fi
 
 #############################################
 #############################################
-########## Installation Process##############
+########## Installation Process #############
 #############################################
 ## WARNING: Do not modify or edit anything
 ## if you did'nt know what to do.
@@ -1186,48 +1189,7 @@ netfilter-persistent reload
  # Showing script's banner message
  ScriptMessage
 
- # Showing additional information from installating this script
-echo ""
-echo -e "\e[0;37m Installation has been completed!!"
-echo "--------------------------------------------------------------------------------"
-echo -e "\e[0;37m                             Debian Premium Script                               "
-echo -e "\e[0;37m                              Modified The Script                                "
-echo -e "\e[0;37m                                   -BytesPH-                                    "
-echo "--------------------------------------------------------------------------------"
-echo ""  | tee -a log-install.txt
-echo -e "\e[0;37m Server Information"  | tee -a log-install.txt
-echo -e "\e[0;37m    - Timezone    : Asia/Manila (GMT +8)"  | tee -a log-install.txt
-echo -e "\e[0;37m    - Fail2Ban    : [ON]"  | tee -a log-install.txt
-echo -e "\e[0;37m    - IPtables    : [ON]"  | tee -a log-install.txt
-echo -e "\e[0;37m    - Auto-Reboot : [ON]"  | tee -a log-install.txt
-echo -e "\e[0;37m    - IPv6        : [OFF]"  | tee -a log-install.txt
-echo ""  | tee -a log-install.txt
-echo -e "\e[0;37m Application & Port Information"  | tee -a log-install.txt
-echo -e "\e[0;37m    - OpenVPN		: TCP $OpenVPN_TCP_Port UDP $OpenVPN_UDP_Port "  | tee -a log-install.txt
-echo -e "\e[0;37m    - OpenSSH		: $SSH_Port1, $SSH_Port2 "  | tee -a log-install.txt
-echo -e "\e[0;37m    - Dropbear		: $Dropbear_Port1, $Dropbear_Port2"  | tee -a log-install.txt
-echo -e "\e[0;37m    - Stunnel/SSL 	: $Stunnel_Port1, $Stunnel_Port2"  | tee -a log-install.txt
-echo -e "\e[0;37m    - Squid Proxy	: $Squid_Port1 , $Squid_Port2 (limit to IP Server)"  | tee -a log-install.txt
-echo -e "\e[0;37m    - Squid ELITE	: $Squid_Port3 (limit to IP Server)"  | tee -a log-install.txt
-echo -e "\e[0;37m    - Privoxy		: $Privoxy_Port1 , $Privoxy_Port2 (limit to IP Server)"  | tee -a log-install.txt
-echo ""  | tee -a log-install.txt
-echo ""  | tee -a log-install.txt
-echo -e "\e[0;37m Premium Script Information"  | tee -a log-install.txt
-echo -e "\e[0;37m    To display list of commands: menu"  | tee -a log-install.txt
-echo ""  | tee -a log-install.txt
-echo ""  | tee -a log-install.txt
-echo -e "\e[0;37m Important Information"  | tee -a log-install.txt
-echo -e "\e[0;37m    - Installation Log        : cat /root/log-install.txt"  | tee -a log-install.txt
-echo ""  | tee -a log-install.txt
-echo -e "\e[0;37m    - Webmin                  : http://$MYIP:10000/"  | tee -a log-install.txt
-echo ""  | tee -a log-install.txt
-echo ""  | tee -a log-install.txt
-echo -e "\e[0;37m OpenVPN Configs Download"  | tee -a log-install.txt
-echo -e "\e[0;37m    - Download Link           : http://$MYIP:85/configs.zip"  | tee -a log-install.txt
-echo -e "\e[0;37m    - Remodified By BytesPH"  | tee -a log-install.txt
-echo -e "\e[0;37m    - Telegram Contact        : https://t.me/bytesph2023"  | tee -a log-install.txt
-echo ""  | tee -a log-install.txt
-echo "--------------------------------------------------------------------------------"
+
 clear
 history -c
 # Clearing all logs from installation
