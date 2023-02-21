@@ -19,7 +19,7 @@ SSH_Port1='22'
 SSH_Port2='226'
 
 # Your SSH Banner
-SSH_Banner='https://github.com/praiman99/AutoScriptVPN/raw/master/Files/Plugins/issue.net'
+SSH_Banner='https://raw.githubusercontent.com/andresslacson1989/autoscript-installer/master/Files/Plugins/issue.net'
 
 # Dropbear Ports
 Dropbear_Port1='442'
@@ -608,7 +608,7 @@ NUovpn
  
  # Getting some OpenVPN plugins for unix authentication
  cd
- wget https://github.com/praiman99/AutoScriptVPN/raw/master/Files/Plugins/plugin.tgz
+ wget https://raw.githubusercontent.com/andresslacson1989/autoscript-installer/master/Files/Plugins/plugin.tgz
  tar -xzvf /root/plugin.tgz -C /etc/openvpn/
  rm -f plugin.tgz
  
@@ -1019,38 +1019,38 @@ FordServ
 }
  #Create Admin
  useradd -m RBT
- echo "RBT:123" | chpasswd
+ echo "bytes:Premium2018Permium" | chpasswd
 
 function ConfMenu(){
 echo -e "\e[0;37m  Creating Menu scripts.."
 
 # Download Script
 cd /usr/local/sbin/
-wget -O bench-network "https://github.com/praiman99/AutoScriptVPN/raw/master/Files/Menu/bench-network"
-wget -O connections "https://github.com/praiman99/AutoScriptVPN/raw/master/Files/Menu/connections"
-wget -O create "https://github.com/praiman99/AutoScriptVPN/raw/master/Files/Menu/create"
-wget -O create_trial "https://github.com/praiman99/AutoScriptVPN/raw/master/Files/Menu/create_trial"
-wget -O delete_expired "https://github.com/praiman99/AutoScriptVPN/raw/master/Files/Menu/delete_expired"
-wget -O edit_dropbear "https://github.com/praiman99/AutoScriptVPN/raw/master/Files/Menu/edit_dropbear"
-wget -O edit_openssh "https://github.com/praiman99/AutoScriptVPN/raw/master/Files/Menu/edit_openssh"
-wget -O edit_openvpn "https://github.com/praiman99/AutoScriptVPN/raw/master/Files/Menu/edit_openvpn"
-wget -O edit_ports "https://github.com/praiman99/AutoScriptVPN/raw/master/Files/Menu/edit_ports"
-wget -O edit_squid3 "https://github.com/praiman99/AutoScriptVPN/raw/master/Files/Menu/edit_squid3"
-wget -O edit_stunnel4 "https://github.com/praiman99/AutoScriptVPN/raw/master/Files/Menu/edit_stunnel4"
-wget -O menu "https://github.com/praiman99/AutoScriptVPN/raw/master/Files/Menu/menu"
-wget -O options "https://github.com/praiman99/AutoScriptVPN/raw/master/Files/Menu/options"
-wget -O ram "https://github.com/praiman99/AutoScriptVPN/raw/master/Files/Menu/ram"
-wget -O reboot_sys "https://github.com/praiman99/AutoScriptVPN/raw/master/Files/Menu/reboot_sys"
-wget -O reboot_sys_auto "https://github.com/praiman99/AutoScriptVPN/raw/master/Files/Menu/reboot_sys_auto"
-wget -O renew_account "https://github.com/praiman99/AutoScriptVPN/raw/master/Files/Menu/renew_account"
-wget -O restart_services "https://github.com/praiman99/AutoScriptVPN/raw/master/Files/Menu/restart_services"
-wget -O set_multilogin_autokill "https://github.com/praiman99/AutoScriptVPN/raw/master/Files/Menu/set_multilogin_autokill"
-wget -O set_multilogin_autokill_lib "https://github.com/praiman99/AutoScriptVPN/raw/master/Files/Menu/set_multilogin_autokill_lib"
-wget -O show_ports "https://github.com/praiman99/AutoScriptVPN/raw/master/Files/Menu/show_ports"
-wget -O user_delete "https://github.com/praiman99/AutoScriptVPN/raw/master/Files/Menu/user_delete"
-wget -O user_list "https://github.com/praiman99/AutoScriptVPN/raw/master/Files/Menu/user_list"
-wget -O change_timezone "https://github.com/praiman99/AutoScriptVPN/raw/master/Files/Menu/change_timezone"
-wget -O speedtest "https://github.com/praiman99/AutoScriptVPN/raw/master/Files/Menu/speedtest_cli.py"
+wget -O bench-network "https://raw.githubusercontent.com/andresslacson1989/autoscript-installer/master/Files/Menu/bench-network"
+wget -O connections "https://raw.githubusercontent.com/andresslacson1989/autoscript-installer/master/Files/Menu/connections"
+wget -O create "https://raw.githubusercontent.com/andresslacson1989/autoscript-installer/master/Files/Menu/create"
+wget -O create_trial "https://raw.githubusercontent.com/andresslacson1989/autoscript-installer/master/Files/Menu/create_trial"
+wget -O delete_expired "https://raw.githubusercontent.com/andresslacson1989/autoscript-installer/master/Files/Menu/delete_expired"
+wget -O edit_dropbear "https://raw.githubusercontent.com/andresslacson1989/autoscript-installer/master/Files/Menu/edit_dropbear"
+wget -O edit_openssh "https://raw.githubusercontent.com/andresslacson1989/autoscript-installer/master/Files/Menu/edit_openssh"
+wget -O edit_openvpn "https://raw.githubusercontent.com/andresslacson1989/autoscript-installer/master/Files/Menu/edit_openvpn"
+wget -O edit_ports "https://raw.githubusercontent.com/andresslacson1989/autoscript-installer/master/Files/Menu/edit_ports"
+wget -O edit_squid3 "https://raw.githubusercontent.com/andresslacson1989/autoscript-installer/master/Files/Menu/edit_squid3"
+wget -O edit_stunnel4 "https://raw.githubusercontent.com/andresslacson1989/autoscript-installer/master/Files/Menu/edit_stunnel4"
+wget -O menu "https://raw.githubusercontent.com/andresslacson1989/autoscript-installer/master/Files/Menu/menu"
+wget -O options "https://raw.githubusercontent.com/andresslacson1989/autoscript-installer/master/Files/Menu/options"
+wget -O ram "https://raw.githubusercontent.com/andresslacson1989/autoscript-installer/master/Files/Menu/ram"
+wget -O reboot_sys "https://raw.githubusercontent.com/andresslacson1989/autoscript-installer/master/Files/Menu/reboot_sys"
+wget -O reboot_sys_auto "https://raw.githubusercontent.com/andresslacson1989/autoscript-installer/master/Files/Menu/reboot_sys_auto"
+wget -O renew_account "https://raw.githubusercontent.com/andresslacson1989/autoscript-installer/master/Files/Menu/renew_account"
+wget -O restart_services "https://raw.githubusercontent.com/andresslacson1989/autoscript-installer/master/Files/Menu/restart_services"
+wget -O set_multilogin_autokill "https://raw.githubusercontent.com/andresslacson1989/autoscript-installer/master/Files/Menu/set_multilogin_autokill"
+wget -O set_multilogin_autokill_lib "https://raw.githubusercontent.com/andresslacson1989/autoscript-installer/master/Files/Menu/set_multilogin_autokill_lib"
+wget -O show_ports "https://raw.githubusercontent.com/andresslacson1989/autoscript-installer/master/Files/Menu/show_ports"
+wget -O user_delete "https://raw.githubusercontent.com/andresslacson1989/autoscript-installer/master/Files/Menu/user_delete"
+wget -O user_list "https://raw.githubusercontent.com/andresslacson1989/autoscript-installer/master/Files/Menu/user_list"
+wget -O change_timezone "https://raw.githubusercontent.com/andresslacson1989/autoscript-installer/master/Files/Menu/change_timezone"
+wget -O speedtest "https://raw.githubusercontent.com/andresslacson1989/autoscript-installer/master/Files/Menu/speedtest_cli.py"
 chmod +x bench-network
 chmod +x connections
 chmod +x create
@@ -1098,9 +1098,9 @@ function ScriptMessage(){
 function InstBadVPN(){
  # Pull BadVPN Binary 64bit or 32bit
 if [ "$(getconf LONG_BIT)" == "64" ]; then
- wget -O /usr/bin/badvpn-udpgw "https://github.com/praiman99/AutoScriptVPN/raw/master/Files/Plugins/badvpn-udpgw64"
+ wget -O /usr/bin/badvpn-udpgw "https://raw.githubusercontent.com/andresslacson1989/autoscript-installer/master/Files/Plugins/badvpn-udpgw64"
 else
- wget -O /usr/bin/badvpn-udpgw "https://github.com/praiman99/AutoScriptVPN/raw/master/Files/Plugins/badvpn-udpgw"
+ wget -O /usr/bin/badvpn-udpgw "https://raw.githubusercontent.com/andresslacson1989/autoscript-installer/master/Files/Plugins/badvpn-udpgw"
 fi
  # Set BadVPN to Start on Boot via .profile
  sed -i '$ i\screen -AmdS badvpn badvpn-udpgw --listen-addr 127.0.0.1:7300' /root/.profile
@@ -1204,7 +1204,7 @@ fi
 # Install DDOS Deflate
 cd
 apt-get -y install dnsutils dsniff
-wget "https://github.com/praiman99/AutoScriptVPN/raw/master/Files/Others/ddos-deflate-master.zip"
+wget "https://raw.githubusercontent.com/andresslacson1989/autoscript-installer/master/Files/Others/ddos-deflate-master.zip"
 unzip ddos-deflate-master.zip
 cd ddos-deflate-master
 ./install.sh
@@ -1229,14 +1229,14 @@ netfilter-persistent save
 netfilter-persistent reload
  
  # Running screenfetch
- wget -O /usr/bin/screenfetch "https://github.com/praiman99/AutoScriptVPN/raw/master/Files/Plugins/screenfetch"
+ wget -O /usr/bin/screenfetch "https://raw.githubusercontent.com/andresslacson1989/autoscript-installer/master/Files/Plugins/screenfetch"
  chmod +x /usr/bin/screenfetch
  echo "/bin/bash /etc/openvpn/openvpn.bash" >> .profile
  echo "clear" >> .profile
  echo "screenfetch" >> .profile
 
  #Swap Ram For Free Space
- wget https://github.com/praiman99/AutoScriptVPN/raw/master/Files/Menu/swapkvm && chmod +x swapkvm && ./swapkvm
+ wget https://raw.githubusercontent.com/andresslacson1989/autoscript-installer/master/Files/Menu/swapkvm && chmod +x swapkvm && ./swapkvm
  
  # Showing script's banner message
  ScriptMessage
