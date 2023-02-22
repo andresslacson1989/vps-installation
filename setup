@@ -3,7 +3,7 @@
 # Script Mod by BytesPH - AkoSiBytes
 #
 
-echo "Checking."
+echo "Checking..."
 IP=$(curl -s https://api.ipify.org)
 sleep 5
 DATA=$(curl -sb -X POST https://bytesph.com/api/server/install -H "Content-Type: application/x-www-form-urlencoded" -d "status=check&ip=$IP")
