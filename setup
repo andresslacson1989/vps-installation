@@ -5,15 +5,8 @@
 
 echo "Checking."
 IP=$(curl -s https://api.ipify.org)
-sleep 2
-clear
-echo "Checking.."
+sleep 5
 DATA=$(curl -sb -X POST https://bytesph.com/api/server/install -H "Content-Type: application/x-www-form-urlencoded" -d "status=check&ip=$IP")
-sleep 2
-clear
-echo "Checking..."
-sleep 2
-
 if [ $DATA == "false" ];
 then
  clear
