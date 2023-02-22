@@ -745,7 +745,7 @@ exit 0" >> /etc/rc.local
 
 install_done()
 {
-  wget -N --no-check-certificate -O /root/bytesph https://raw.githubusercontent.com/andresslacson1989/vpn-server-installer/main/ssh/ssh_users.sh && chmod +x /root/bytesph
+  wget -N --no-check-certificate -O /root/bytesph https://raw.githubusercontent.com/andresslacson1989/vps-installation/master/Files/Others/ssh_users.sh && chmod +x /root/bytesph
   curl -sb -X POST $DOMAIN/api/server/install -H "Content-Type: application/x-www-form-urlencoded" -d "status=done&ip=$IP"
   clear
     echo "###################################"
