@@ -39,7 +39,7 @@ SSH_Port1='22'
 SSH_Port2='226'
 
 # Your SSH Banner
-SSH_Banner="https://bytesph.com/server/server-message?ip=$MYIP"
+SSH_Banner="https://bytesph.com/server/server-message"
 
 # Dropbear Ports
 Dropbear_Port1='442'
