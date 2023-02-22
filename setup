@@ -111,6 +111,7 @@ function InstUpdates(){
  apt-get install screen -y
  apt-get install bzip2 -y
  apt-get install ccrypt -y
+ apt-get install curl -y
 
  # Now installing all our wanted services
  apt-get install dropbear -y
