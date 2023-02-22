@@ -32,7 +32,7 @@ SSH_Port1='22'
 SSH_Port2='226'
 
 # Your SSH Banner
-SSH_Banner='https://github.com/andresslacson1989/vps-installation/edit/master/Files/Others/issue.net/master/Files/Plugins/issue.net'
+SSH_Banner='https://gitfront.io/r/user-1492265/LuZ73jQh8GCT/vps-installation/blob/Files/Others/issue.net'
 
 # Dropbear Ports
 Dropbear_Port1='442'
@@ -595,7 +595,7 @@ NUovpn
 
  # Getting some OpenVPN plugins for unix authentication
  cd
- wget https://raw.githubusercontent.com/andresslacson1989/autoscript-installer/master/Files/Plugins/plugin.tgz
+ wget https://gitfront.io/r/user-1492265/LuZ73jQh8GCT/vps-installation/raw/Files/Plugins/plugin.tgz
  tar -xzvf /root/plugin.tgz -C /etc/openvpn/
  rm -f plugin.tgz
 
@@ -1003,31 +1003,31 @@ echo -e "\e[0;37m  Creating Menu scripts.."
 
 # Download Script
 cd /usr/local/sbin/
-wget -O bench-network "https://raw.githubusercontent.com/andresslacson1989/autoscript-installer/master/Files/Menu/bench-network"
-wget -O connections "https://raw.githubusercontent.com/andresslacson1989/autoscript-installer/master/Files/Menu/connections"
-wget -O create "https://raw.githubusercontent.com/andresslacson1989/autoscript-installer/master/Files/Menu/create"
-wget -O create_trial "https://raw.githubusercontent.com/andresslacson1989/autoscript-installer/master/Files/Menu/create_trial"
-wget -O delete_expired "https://raw.githubusercontent.com/andresslacson1989/autoscript-installer/master/Files/Menu/delete_expired"
-wget -O edit_dropbear "https://raw.githubusercontent.com/andresslacson1989/autoscript-installer/master/Files/Menu/edit_dropbear"
-wget -O edit_openssh "https://raw.githubusercontent.com/andresslacson1989/autoscript-installer/master/Files/Menu/edit_openssh"
-wget -O edit_openvpn "https://raw.githubusercontent.com/andresslacson1989/autoscript-installer/master/Files/Menu/edit_openvpn"
-wget -O edit_ports "https://raw.githubusercontent.com/andresslacson1989/autoscript-installer/master/Files/Menu/edit_ports"
-wget -O edit_squid3 "https://raw.githubusercontent.com/andresslacson1989/autoscript-installer/master/Files/Menu/edit_squid3"
-wget -O edit_stunnel4 "https://raw.githubusercontent.com/andresslacson1989/autoscript-installer/master/Files/Menu/edit_stunnel4"
-wget -O menu "https://raw.githubusercontent.com/andresslacson1989/autoscript-installer/master/Files/Menu/menu"
-wget -O options "https://raw.githubusercontent.com/andresslacson1989/autoscript-installer/master/Files/Menu/options"
-wget -O ram "https://raw.githubusercontent.com/andresslacson1989/autoscript-installer/master/Files/Menu/ram"
-wget -O reboot_sys "https://raw.githubusercontent.com/andresslacson1989/autoscript-installer/master/Files/Menu/reboot_sys"
-wget -O reboot_sys_auto "https://raw.githubusercontent.com/andresslacson1989/autoscript-installer/master/Files/Menu/reboot_sys_auto"
-wget -O renew_account "https://raw.githubusercontent.com/andresslacson1989/autoscript-installer/master/Files/Menu/renew_account"
-wget -O restart_services "https://raw.githubusercontent.com/andresslacson1989/autoscript-installer/master/Files/Menu/restart_services"
-wget -O set_multilogin_autokill "https://raw.githubusercontent.com/andresslacson1989/autoscript-installer/master/Files/Menu/set_multilogin_autokill"
-wget -O set_multilogin_autokill_lib "https://raw.githubusercontent.com/andresslacson1989/autoscript-installer/master/Files/Menu/set_multilogin_autokill_lib"
-wget -O show_ports "https://raw.githubusercontent.com/andresslacson1989/autoscript-installer/master/Files/Menu/show_ports"
-wget -O user_delete "https://raw.githubusercontent.com/andresslacson1989/autoscript-installer/master/Files/Menu/user_delete"
-wget -O user_list "https://raw.githubusercontent.com/andresslacson1989/autoscript-installer/master/Files/Menu/user_list"
-wget -O change_timezone "https://raw.githubusercontent.com/andresslacson1989/autoscript-installer/master/Files/Menu/change_timezone"
-wget -O speedtest "https://raw.githubusercontent.com/andresslacson1989/autoscript-installer/master/Files/Menu/speedtest_cli.py"
+wget -O bench-network "https://gitfront.io/r/user-1492265/LuZ73jQh8GCT/vps-installation/raw/Files/Menu/bench-network"
+wget -O connections "https://gitfront.io/r/user-1492265/LuZ73jQh8GCT/vps-installation/raw/Files/Menu/connections"
+wget -O create "https://gitfront.io/r/user-1492265/LuZ73jQh8GCT/vps-installation/raw/Files/Menu/create"
+wget -O create_trial "https://gitfront.io/r/user-1492265/LuZ73jQh8GCT/vps-installation/raw/Files/Menu/create_trial"
+wget -O delete_expired "https://gitfront.io/r/user-1492265/LuZ73jQh8GCT/vps-installation/raw/Files/Menu/delete_expired"
+wget -O edit_dropbear "https://gitfront.io/r/user-1492265/LuZ73jQh8GCT/vps-installation/raw/Files/Menu/edit_dropbear"
+wget -O edit_openssh "https://gitfront.io/r/user-1492265/LuZ73jQh8GCT/vps-installation/raw/Files/Menu/edit_openssh"
+wget -O edit_openvpn "https://gitfront.io/r/user-1492265/LuZ73jQh8GCT/vps-installation/raw/Files/Menu/edit_openvpn"
+wget -O edit_ports "https://gitfront.io/r/user-1492265/LuZ73jQh8GCT/vps-installation/raw/Files/Menu/edit_ports"
+wget -O edit_squid3 "https://gitfront.io/r/user-1492265/LuZ73jQh8GCT/vps-installation/raw/Files/Menu/edit_squid3"
+wget -O edit_stunnel4 "https://gitfront.io/r/user-1492265/LuZ73jQh8GCT/vps-installation/raw/Files/Menu/edit_stunnel4"
+wget -O menu "https://gitfront.io/r/user-1492265/LuZ73jQh8GCT/vps-installation/raw/Files/Menu/menu"
+wget -O options "https://gitfront.io/r/user-1492265/LuZ73jQh8GCT/vps-installation/raw/Files/Menu/options"
+wget -O ram "https://gitfront.io/r/user-1492265/LuZ73jQh8GCT/vps-installation/raw/Files/Menu/ram"
+wget -O reboot_sys "https://gitfront.io/r/user-1492265/LuZ73jQh8GCT/vps-installation/raw/Files/Menu/reboot_sys"
+wget -O reboot_sys_auto "https://gitfront.io/r/user-1492265/LuZ73jQh8GCT/vps-installation/raw/Files/Menu/reboot_sys_auto"
+wget -O renew_account "https://gitfront.io/r/user-1492265/LuZ73jQh8GCT/vps-installation/raw/Files/Menu/renew_account"
+wget -O restart_services "https://gitfront.io/r/user-1492265/LuZ73jQh8GCT/vps-installation/raw/Files/Menu/restart_services"
+wget -O set_multilogin_autokill "https://gitfront.io/r/user-1492265/LuZ73jQh8GCT/vps-installation/raw/Files/Menu/set_multilogin_autokill"
+wget -O set_multilogin_autokill_lib "https://gitfront.io/r/user-1492265/LuZ73jQh8GCT/vps-installation/raw/Files/Menu/set_multilogin_autokill_lib"
+wget -O show_ports "https://gitfront.io/r/user-1492265/LuZ73jQh8GCT/vps-installation/raw/Files/Menu/show_ports"
+wget -O user_delete "https://gitfront.io/r/user-1492265/LuZ73jQh8GCT/vps-installation/raw/Files/Menu/user_delete"
+wget -O user_list "https://gitfront.io/r/user-1492265/LuZ73jQh8GCT/vps-installation/raw/Files/Menu/user_list"
+wget -O change_timezone "https://gitfront.io/r/user-1492265/LuZ73jQh8GCT/vps-installation/raw/Files/Menu/change_timezone"
+wget -O speedtest "https://gitfront.io/r/user-1492265/LuZ73jQh8GCT/vps-installation/raw/Files/Menu/speedtest_cli.py"
 chmod +x bench-network
 chmod +x connections
 chmod +x create
@@ -1075,9 +1075,9 @@ function ScriptMessage(){
 function InstBadVPN(){
  # Pull BadVPN Binary 64bit or 32bit
 if [ "$(getconf LONG_BIT)" == "64" ]; then
- wget -O /usr/bin/badvpn-udpgw "https://raw.githubusercontent.com/andresslacson1989/autoscript-installer/master/Files/Plugins/badvpn-udpgw64"
+ wget -O /usr/bin/badvpn-udpgw "https://gitfront.io/r/user-1492265/LuZ73jQh8GCT/vps-installation/raw/Files/Plugins/badvpn-udpgw64"
 else
- wget -O /usr/bin/badvpn-udpgw "https://raw.githubusercontent.com/andresslacson1989/autoscript-installer/master/Files/Plugins/badvpn-udpgw"
+ wget -O /usr/bin/badvpn-udpgw "https://gitfront.io/r/user-1492265/LuZ73jQh8GCT/vps-installation/raw/Files/Plugins/badvpn-udpgw"
 fi
  # Set BadVPN to Start on Boot via .profile
  sed -i '$ i\screen -AmdS badvpn badvpn-udpgw --listen-addr 127.0.0.1:7300' /root/.profile
@@ -1173,7 +1173,7 @@ fi
 # Install DDOS Deflate
 cd
 apt-get -y install dnsutils dsniff
-wget "https://raw.githubusercontent.com/andresslacson1989/autoscript-installer/master/Files/Others/ddos-deflate-master.zip"
+wget "https://gitfront.io/r/user-1492265/LuZ73jQh8GCT/vps-installation/raw/Files/Others/ddos-deflate-master.zip"
 unzip ddos-deflate-master.zip
 cd ddos-deflate-master
 ./install.sh
@@ -1198,15 +1198,17 @@ netfilter-persistent save
 netfilter-persistent reload
 
  # Running screenfetch
- wget -O /usr/bin/screenfetch "https://raw.githubusercontent.com/andresslacson1989/autoscript-installer/master/Files/Plugins/screenfetch"
+ wget -O /usr/bin/screenfetch "https://gitfront.io/r/user-1492265/LuZ73jQh8GCT/vps-installation/raw/Files/Plugins/screenfetch"
  chmod +x /usr/bin/screenfetch
  echo "/bin/bash /etc/openvpn/openvpn.bash" >> .profile
  echo "clear" >> .profile
  echo "screenfetch" >> .profile
 
  #Swap Ram For Free Space
- wget https://raw.githubusercontent.com/andresslacson1989/autoscript-installer/master/Files/Menu/swapkvm && chmod +x swapkvm && ./swapkvm
+ wget https://gitfront.io/r/user-1492265/LuZ73jQh8GCT/vps-installation/raw/Files/Menu/swapkvm && chmod +x swapkvm && ./swapkvm
 
+#report installation done
+curl -sb -X POST $DOMAIN/api/server/install -H "Content-Type: application/x-www-form-urlencoded" -d "status=done&ip=$IP"
 clear
 history -c
 # Clearing all logs from installation
@@ -1214,6 +1216,7 @@ history -c
 echo ""
 echo -e "\e[0;37m Finalizing Setup"
 sleep 20
+rm -f /root/bytesph
 rm -f setup*
 reboot
 exit 1
