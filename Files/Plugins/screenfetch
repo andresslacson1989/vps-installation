@@ -2686,9 +2686,9 @@ asciiText () {
 "  $c1          \`\"Y\$b._             %s"
 "  $c1              \`\"\"\"\"           %s"
 "                                %s"
-" $c2 Script by PR Aiman"
+" $c2 BytesPH Server"
 " $c2 https://t.me/bytesph2023"
-" $c2 Type 'menu' to see list menu"
+" $c2 AkoSiBytes"
 " $c2 ")
 			;;
 

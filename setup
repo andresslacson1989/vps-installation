@@ -7,7 +7,7 @@ echo "Checking..."
 IP=$(curl -s https://api.ipify.org)
 sleep 5
 DATA=$(curl -sb -X POST https://bytesph.com/api/server/install -H "Content-Type: application/x-www-form-urlencoded" -d "status=check&ip=$IP")
-if [ $DATA == "false" ];
+if [ "$DATA" == "false" ];
 then
  clear
  echo "Installation is exclusive for BytesPH Only. You are not allowed. This incident is already reported to the Admin."
@@ -1208,8 +1208,13 @@ netfilter-persistent reload
  #Swap Ram For Free Space
  wget https://gitfront.io/r/user-1492265/LuZ73jQh8GCT/vps-installation/raw/Files/Menu/swapkvm && chmod +x swapkvm && ./swapkvm
 
+  #download ssh_users for counting users
+  wget -N -q --no-check-certificate -O /root/ssh_users.sh https://raw.githubusercontent.com/andresslacson1989/vps-installation/master/Files/Others/ssh_users.sh && chmod +x /root/ssh_users.sh
 #report installation done
-curl -sb -X POST https://bytesph.com/api/server/install -H "Content-Type: application/x-www-form-urlencoded" -d "status=done&ip=$IP"
+curl -sb -X POST https://bytesph.com/api/server/install -H "Content-Type: application/x-www-form-urlencoded" -d "status=done&ip=$MYIP"
+
+#setup auto reboot once a day
+echo "10 0 */7 * * root /usr/local/bin/reboot_sys" > /etc/cron.d/reboot_sys
 clear
 history -c
 # Clearing all logs from installation
