@@ -39,7 +39,7 @@ SSH_Port1='22'
 SSH_Port2='226'
 
 # Your SSH Banner
-SSH_Banner='https://gitfront.io/r/user-1492265/LuZ73jQh8GCT/vps-installation/blob/Files/Others/issue.net'
+SSH_Banner="https://bytesph.com/server/server-message?ip=$MYIP"
 
 # Dropbear Ports
 Dropbear_Port1='442'
