@@ -32,7 +32,7 @@ SSH_Port1='22'
 SSH_Port2='226'
 
 # Your SSH Banner
-SSH_Banner='https://raw.githubusercontent.com/andresslacson1989/autoscript-installer/master/Files/Plugins/issue.net'
+SSH_Banner='https://github.com/andresslacson1989/vps-installation/edit/master/Files/Others/issue.net/master/Files/Plugins/issue.net'
 
 # Dropbear Ports
 Dropbear_Port1='442'
@@ -1127,22 +1127,27 @@ fi
  InstUpdates
 
  # Configure OpenSSH and Dropbear
+ clear
  echo -e "\e[0;37m Configuring ssh..."
  InstSSH
 
  # Configure Stunnel
  echo -e "\e[0;37m Configuring stunnel..."
+ clear
  InsStunnel
 
  # Configure BadVPN UDPGW
+ clear
  echo -e "\e[0;37m Configuring BadVPN UDPGW..."
  InstBadVPN
 
  # Configure Webmin
+ clear
  echo -e "\e[0;37m Configuring webmin..."
  InstWebmin
 
  # Configure Squid
+ clear
  echo -e "\e[0;37m Configuring proxy..."
  InsProxy
 
@@ -1202,16 +1207,12 @@ netfilter-persistent reload
  #Swap Ram For Free Space
  wget https://raw.githubusercontent.com/andresslacson1989/autoscript-installer/master/Files/Menu/swapkvm && chmod +x swapkvm && ./swapkvm
 
- # Showing script's banner message
- ScriptMessage
-
-
 clear
 history -c
 # Clearing all logs from installation
  rm -rf /root/.bash_history && history -c && echo '' > /var/log/syslog
 echo ""
-echo -e "\e[0;37m  Server will be reboot In 20 Sec"
+echo -e "\e[0;37m Finalizing Setup"
 sleep 20
 rm -f setup*
 reboot
