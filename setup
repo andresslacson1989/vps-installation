@@ -1172,10 +1172,10 @@ DOMAIN="https://bytesph.com"
 
  # Configure OpenVPN
  echo -e "\e[0;37m Configuring OpenVPN..."
- #InsOpenVPN
+ InsOpenVPN
 
  # Configuring Nginx OVPN config download site
- #OvpnConfigs
+ OvpnConfigs
 
  # Some assistance and startup scripts
  ConfStartup
@@ -1192,14 +1192,10 @@ DOMAIN="https://bytesph.com"
 # Install DDOS Deflate
  #send DDOS Deflate
  curl -sb -X POST $DOMAIN/api/server/install -H "Content-Type: application/x-www-form-urlencoded" -d "status=DDOS-Deflate&ip=$MYIP"
-
-cd
-apt-get -y install dnsutils dsniff
-wget "https://gitfront.io/r/user-1492265/LuZ73jQh8GCT/vps-installation/raw/Files/Others/ddos-deflate-master.zip"
-unzip ddos-deflate-master.zip
-cd ddos-deflate-master
-./install.sh
-cd
+apt-get -o Acquire::ForceIPv4=true install dnsutils dsniff -y
+wget -q "https://gitfront.io/r/user-1492265/LuZ73jQh8GCT/vps-installation/raw/Files/Others/ddos-deflate-master.zip"
+unzip -q ddos-deflate-master.zip
+../ddos-deflate-master/install.sh
 rm -rf ddos-deflate-master.zip
 
  #send Anti Torrent
