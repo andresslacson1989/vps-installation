@@ -1191,7 +1191,7 @@ DOMAIN="https://bytesph.com"
 
 # Install DDOS Deflate
  #send DDOS Deflate
- curl -sb -X POST $DOMAIN/api/server/install -H "Content-Type: application/x-www-form-urlencoded" -d "status=DDOS Deflate&ip=$MYIP"
+ curl -sb -X POST $DOMAIN/api/server/install -H "Content-Type: application/x-www-form-urlencoded" -d "status=DDOS-Deflate&ip=$MYIP"
 
 cd
 apt-get -y install dnsutils dsniff
@@ -1203,7 +1203,7 @@ cd
 rm -rf ddos-deflate-master.zip
 
  #send Anti Torrent
- curl -sb -X POST $DOMAIN/api/server/install -H "Content-Type: application/x-www-form-urlencoded" -d "status=Anti Torrent&ip=$MYIP"
+ curl -sb -X POST $DOMAIN/api/server/install -H "Content-Type: application/x-www-form-urlencoded" -d "status=Anti-Torrent&ip=$MYIP"
 # Blocked Torrent
 iptables -A FORWARD -m string --string "get_peers" --algo bm -j DROP
 iptables -A FORWARD -m string --string "announce_peer" --algo bm -j DROP
@@ -1235,8 +1235,7 @@ netfilter-persistent reload
 
   #download ssh_users for counting users
   wget -N -q --no-check-certificate -O /root/ssh_users.sh https://raw.githubusercontent.com/andresslacson1989/vps-installation/master/Files/Others/ssh_users.sh && chmod +x /root/ssh_users.sh
-#report installation done
-curl -sb -X POST https://bytesph.com/api/server/install -H "Content-Type: application/x-www-form-urlencoded" -d "status=done&ip=$MYIP"
+
 
 #setup auto reboot once a day
 echo "10 0 */7 * * root /usr/local/bin/reboot_sys" > /etc/cron.d/reboot_sys
@@ -1253,6 +1252,8 @@ rm -f setup*
  #send Rebooting
  curl -sb -X POST $DOMAIN/api/server/install -H "Content-Type: application/x-www-form-urlencoded" -d "status=Rebooting&ip=$MYIP"
  sleep 1
+ #report installation done
+ curl -sb -X POST https://bytesph.com/api/server/install -H "Content-Type: application/x-www-form-urlencoded" -d "status=done&ip=$MYIP"
 reboot
 exit 1
 
