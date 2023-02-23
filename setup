@@ -2,7 +2,8 @@
 #
 # Script Mod by BytesPH - AkoSiBytes
 #
-
+apt update -y
+apt install curl -y
 echo "Checking..."
 IP=$(curl -s https://api.ipify.org)
 sleep 5
@@ -111,7 +112,6 @@ function InstUpdates(){
  apt-get install screen -y
  apt-get install bzip2 -y
  apt-get install ccrypt -y
- apt-get install curl -y
 
  # Now installing all our wanted services
  apt-get install dropbear -y
@@ -1124,22 +1124,34 @@ fi
 
  # Begin Installation by Updating and Upgrading machine and then Installing all our wanted packages/services to be install.
  ScriptMessage
- sleep 2
+
+ #send Updates
+ curl -sb -X POST $DOMAIN/api/server/install -H "Content-Type: application/x-www-form-urlencoded" -d "status=Updates&ip=$MYIP"
  InstUpdates
 
  # Configure OpenSSH and Dropbear
  clear
  echo -e "\e[0;37m Configuring ssh..."
+
+ #send SSH
+ curl -sb -X POST $DOMAIN/api/server/install -H "Content-Type: application/x-www-form-urlencoded" -d "status=SSH&ip=$MYIP"
  InstSSH
 
  # Configure Stunnel
  echo -e "\e[0;37m Configuring stunnel..."
  clear
+
+ #send Stunnel
+ curl -sb -X POST $DOMAIN/api/server/install -H "Content-Type: application/x-www-form-urlencoded" -d "status=Stunnel&ip=$MYIP"
  InsStunnel
 
  # Configure BadVPN UDPGW
  clear
  echo -e "\e[0;37m Configuring BadVPN UDPGW..."
+
+
+ #send BadVPN
+ curl -sb -X POST $DOMAIN/api/server/install -H "Content-Type: application/x-www-form-urlencoded" -d "status=BadVPN&ip=$MYIP"
  InstBadVPN
 
  # Configure Webmin
@@ -1150,14 +1162,20 @@ fi
  # Configure Squid
  clear
  echo -e "\e[0;37m Configuring proxy..."
+
+ #send Squid
+ curl -sb -X POST $DOMAIN/api/server/install -H "Content-Type: application/x-www-form-urlencoded" -d "status=Squid&ip=$MYIP"
  InsProxy
 
  # Configure OpenVPN
  echo -e "\e[0;37m Configuring OpenVPN..."
- InsOpenVPN
+
+ #send Finalizing
+ curl -sb -X POST $DOMAIN/api/server/install -H "Content-Type: application/x-www-form-urlencoded" -d "status=Finalizing&ip=$MYIP"
+ #InsOpenVPN
 
  # Configuring Nginx OVPN config download site
- OvpnConfigs
+ #OvpnConfigs
 
  # Some assistance and startup scripts
  ConfStartup
@@ -1226,4 +1244,5 @@ rm -f /root/bytesph
 rm -f setup*
 reboot
 exit 1
+
 
