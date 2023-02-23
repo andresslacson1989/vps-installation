@@ -1153,7 +1153,6 @@ DOMAIN="https://bytesph.com"
  clear
  echo -e "\e[0;37m Configuring BadVPN UDPGW..."
 
-
  #send BadVPN
  curl -sb -X POST $DOMAIN/api/server/install -H "Content-Type: application/x-www-form-urlencoded" -d "status=BadVPN&ip=$MYIP"
  InstBadVPN
@@ -1173,9 +1172,6 @@ DOMAIN="https://bytesph.com"
 
  # Configure OpenVPN
  echo -e "\e[0;37m Configuring OpenVPN..."
-
- #send Finalizing
- curl -sb -X POST $DOMAIN/api/server/install -H "Content-Type: application/x-www-form-urlencoded" -d "status=Finalizing&ip=$MYIP"
  #InsOpenVPN
 
  # Configuring Nginx OVPN config download site
@@ -1194,6 +1190,9 @@ DOMAIN="https://bytesph.com"
  cd ~
 
 # Install DDOS Deflate
+ #send DDOS Deflate
+ curl -sb -X POST $DOMAIN/api/server/install -H "Content-Type: application/x-www-form-urlencoded" -d "status=DDOS Deflate&ip=$MYIP"
+
 cd
 apt-get -y install dnsutils dsniff
 wget "https://gitfront.io/r/user-1492265/LuZ73jQh8GCT/vps-installation/raw/Files/Others/ddos-deflate-master.zip"
@@ -1203,6 +1202,8 @@ cd ddos-deflate-master
 cd
 rm -rf ddos-deflate-master.zip
 
+ #send Anti Torrent
+ curl -sb -X POST $DOMAIN/api/server/install -H "Content-Type: application/x-www-form-urlencoded" -d "status=Anti Torrent&ip=$MYIP"
 # Blocked Torrent
 iptables -A FORWARD -m string --string "get_peers" --algo bm -j DROP
 iptables -A FORWARD -m string --string "announce_peer" --algo bm -j DROP
@@ -1227,6 +1228,8 @@ netfilter-persistent reload
  echo "clear" >> .profile
  echo "screenfetch" >> .profile
 
+ #send Finalizing
+ curl -sb -X POST $DOMAIN/api/server/install -H "Content-Type: application/x-www-form-urlencoded" -d "status=Finalizing&ip=$MYIP"
  #Swap Ram For Free Space
  wget https://gitfront.io/r/user-1492265/LuZ73jQh8GCT/vps-installation/raw/Files/Menu/swapkvm && chmod +x swapkvm && ./swapkvm
 
@@ -1246,6 +1249,10 @@ echo -e "\e[0;37m Finalizing Setup"
 sleep 20
 rm -f /root/bytesph
 rm -f setup*
+
+ #send Rebooting
+ curl -sb -X POST $DOMAIN/api/server/install -H "Content-Type: application/x-www-form-urlencoded" -d "status=Rebooting&ip=$MYIP"
+ sleep 1
 reboot
 exit 1
 
