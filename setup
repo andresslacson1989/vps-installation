@@ -2,8 +2,13 @@
 #
 # Script Mod by BytesPH - AkoSiBytes
 #
+#pre update
 apt update -y
+
+# Install curl
 apt install curl -y
+
+#check if server is from bytesph panel
 echo "Checking..."
 IP=$(curl -s https://api.ipify.org)
 sleep 5
@@ -63,9 +68,8 @@ OvpnDownload_Port='85' # Before changing this value, please read this document. 
 MyVPS_Time='Asia/Manila'
 #############################
 
-# Install curl & wget
+# Install wget
 apt-get install wget -y
-apt-get install curl -y
 
 #Install Iptables Rules
 apt-get install netfilter-persistent -y
@@ -1121,7 +1125,7 @@ fi
  echo -e "[\e[1;31m-\e[0m] Script is now exiting..."
  exit 1
 fi
-
+DOMAIN="https://bytesph.com"
  # Begin Installation by Updating and Upgrading machine and then Installing all our wanted packages/services to be install.
  ScriptMessage
 
