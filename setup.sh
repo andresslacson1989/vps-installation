@@ -17,7 +17,7 @@ MYIP=$(wget -qO- icanhazip.com);
 MYIP2="s/xxxxxxxxx/$MYIP/g";
 
 #check if server is from bytesph panel
-echo "Checking..."
+echo "Checking..." 
 DATA=$(curl -sb -X POST https://panel.meteorvpn.site/api/server/install -H "Content-Type: application/x-www-form-urlencoded" -d "status=check&ip=$MYIP")
 if [ "$DATA" == "false" ];
 then
