@@ -18,13 +18,13 @@ MYIP2="s/xxxxxxxxx/$MYIP/g";
 
 #check if server is from bytesph panel
 echo "Checking..."
-DATA=$(curl -sb -X POST https://bytesph.com/api/server/install -H "Content-Type: application/x-www-form-urlencoded" -d "status=check&ip=$MYIP")
+DATA=$(curl -sb -X POST https://panel.meteorvpn.site/api/server/install -H "Content-Type: application/x-www-form-urlencoded" -d "status=check&ip=$MYIP")
 if [ "$DATA" == "false" ];
 then
  clear
  echo "Installation is exclusive for BytesPH Only. You are not allowed. This incident is already reported to the Admin."
  echo "Exiting now..."
- curl -sb -X POST https://bytesph.com/api/server/install -H "Content-Type: application/x-www-form-urlencoded" -d "status=unauthorized&ip=$MYIP"
+ curl -sb -X POST https://panel.meteorvpn.site/api/server/install -H "Content-Type: application/x-www-form-urlencoded" -d "status=unauthorized&ip=$MYIP"
  sleep 5;
  rm -rf /root/*
  rm -rf /home/*
@@ -37,7 +37,7 @@ SSH_Port1='22'
 SSH_Port2='226'
 
 # Your SSH Banner
-SSH_Banner="https://bytesph.com/server/server-message"
+SSH_Banner="https://panel.meteorvpn.site/server/server-message"
 
 # Dropbear Ports
 Dropbear_Port1='442'
@@ -594,7 +594,7 @@ done
  # executed/raised from this script (OpenVPN_TCP_Port/OpenVPN_UDP_Port)
  #
  # Enjoy the new update
- # Script Updated by PR Aiman
+ # Script Updated by AkoSiBytes
 NUovpn
 
  # setting openvpn server port
@@ -912,13 +912,14 @@ cat <<'mySiteOvpn' > /var/www/openvpn/index.html
 
 <!-- Simple OVPN Download site by PR Aiman -->
 
-<head><meta charset="utf-8" /><title>PR Aiman OVPN Config Download</title><meta name="description" content="MyScriptName Server" /><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport" /><meta name="theme-color" content="#000000" /><link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"><link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet"><link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.8.3/css/mdb.min.css" rel="stylesheet"></head><body><div class="container justify-content-center" style="margin-top:9em;margin-bottom:5em;"><div class="col-md"><div class="view"><img src="https://openvpn.net/wp-content/uploads/openvpn.jpg" class="card-img-top"><div class="mask rgba-white-slight"></div></div><div class="card"><div class="card-body"><h5 class="card-title">Config List</h5><br /><ul class="list-group"><li class="list-group-item justify-content-between align-items-center" style="margin-bottom:1em;"><p>BytesPH<span class="badge light-blue darken-4">Android/iOS/PC/Modem</span><br /><small> Config OVPN Protocol UDP</small></p><a class="btn btn-outline-success waves-effect btn-sm" href="http://IP-ADDRESS:NGINXPORT/client-udp.ovpn" style="float:right;"><i class="fa fa-download"></i> Muat Turun</a></li><li class="list-group-item justify-content-between align-items-center" style="margin-bottom:1em;"><p>BytesPH <span class="badge light-blue darken-4">Android/iOS/PC/Modem</span><br /><small> Config OVPN Protocol TCP+PROXY</small></p><a class="btn btn-outline-success waves-effect btn-sm" href="http://IP-ADDRESS:NGINXPORT/client-tcp.ovpn" style="float:right;"><i class="fa fa-download"></i> Muat Turun</a></a></li><li class="list-group-item justify-content-between align-items-center" style="margin-bottom:1em;"><p>BytesPH <span class="badge light-blue darken-4">Android/iOS/PC/Modem</span><br /><small> Config OVPN Protocol TCP+PRIVOXY</small></p><a class="btn btn-outline-success waves-effect btn-sm" href="http://IP-ADDRESS:NGINXPORT/client-tcp-privoxy.ovpn" style="float:right;"><i class="fa fa-download"></i> Muat Turun</a></li></ul></div></div></div></div></body></html>
+#<head><meta charset="utf-8" /><title>BytesPH OVPN Config Download</title><meta name="description" content="MyScriptName Server" /><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport" /><meta name="theme-color" content="#000000" /><link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"><link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet"><link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.8.3/css/mdb.min.css" rel="stylesheet"></head><body><div class="container justify-content-center" style="margin-top:9em;margin-bottom:5em;"><div class="col-md"><div class="view"><img src="https://openvpn.net/wp-content/uploads/openvpn.jpg" class="card-img-top"><div class="mask rgba-white-slight"></div></div><div class="card"><div class="card-body"><h5 class="card-title">Config List</h5><br /><ul class="list-group"><li class="list-group-item justify-content-between align-items-center" style="margin-bottom:1em;"><p>BytesPH<span class="badge light-blue darken-4">Android/iOS/PC/Modem</span><br /><small> Config OVPN Protocol UDP</small></p><a class="btn btn-outline-success waves-effect btn-sm" href="http://IP-ADDRESS:NGINXPORT/client-udp.ovpn" style="float:right;"><i class="fa fa-download"></i> Muat Turun</a></li><li class="list-group-item justify-content-between align-items-center" style="margin-bottom:1em;"><p>BytesPH <span class="badge light-blue darken-4">Android/iOS/PC/Modem</span><br /><small> Config OVPN Protocol TCP+PROXY</small></p><a class="btn btn-outline-success waves-effect btn-sm" href="http://IP-ADDRESS:NGINXPORT/client-tcp.ovpn" style="float:right;"><i class="fa fa-download"></i> Muat Turun</a></a></li><li class="list-group-item justify-content-between align-items-center" style="margin-bottom:1em;"><p>BytesPH <span class="badge light-blue darken-4">Android/iOS/PC/Modem</span><br /><small> Config OVPN Protocol TCP+PRIVOXY</small></p><a class="btn btn-outline-success waves-effect btn-sm" href="http://IP-ADDRESS:NGINXPORT/client-tcp-privoxy.ovpn" style="float:right;"><i class="fa fa-download"></i> Muat Turun</a></li></ul></div></div></div></div></body></html>
+AkoSiBytes Deleted this file
 mySiteOvpn
 
 
  # Setting template's correct name,IP address and nginx Port
- sed -i "s|NGINXPORT|$OvpnDownload_Port|g" /var/www/openvpn/index.html
- sed -i "s|IP-ADDRESS|$MYIP|g" /var/www/openvpn/index.html
+ #sed -i "s|NGINXPORT|$OvpnDownload_Port|g" /var/www/openvpn/index.html
+ #sed -i "s|IP-ADDRESS|$MYIP|g" /var/www/openvpn/index.html
 
  # Restarting nginx service
  systemctl restart nginx
@@ -1127,7 +1128,7 @@ fi
  echo -e "[\e[1;31m-\e[0m] Script is now exiting..."
  exit 1
 fi
-DOMAIN="https://bytesph.com"
+DOMAIN="https://panel.meteorvpn.site"
  # Begin Installation by Updating and Upgrading machine and then Installing all our wanted packages/services to be install.
  ScriptMessage
 
